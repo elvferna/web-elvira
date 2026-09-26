@@ -1,1 +1,255 @@
-pagina web fea de elvira
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Perfil personal de Elvira, alumna de Big Data interesada en el análisis y el valor de los datos.">
+	<title>Elvira | Alumna de Big Data</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--ink: #202a32;
+			--muted: #5d6a72;
+			--accent: #146b62;
+			--accent-soft: #e7f3f0;
+			--line: #dce5e2;
+			--paper: #ffffff;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			margin: 0;
+			background: var(--paper);
+			color: var(--ink);
+			font-family: "Comic Sans MS", "Comic Sans", cursive;
+			font-size: 16px;
+			line-height: 1.7;
+		}
+
+		a {
+			color: inherit;
+		}
+
+		.page {
+			width: min(100% - 40px, 900px);
+			margin-inline: auto;
+		}
+
+		.topbar {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 24px;
+			padding-block: 22px;
+			border-bottom: 1px solid var(--line);
+		}
+
+		.wordmark {
+			color: var(--accent);
+			font-weight: 700;
+			text-decoration: none;
+		}
+
+		.nav {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 22px;
+		}
+
+		.nav a {
+			color: var(--muted);
+			font-size: 0.95rem;
+			text-decoration: none;
+		}
+
+		.nav a:hover,
+		.nav a:focus-visible {
+			color: var(--accent);
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+
+		.intro {
+			padding-block: clamp(64px, 11vw, 112px) 76px;
+			max-width: 720px;
+		}
+
+		.eyebrow {
+			margin: 0 0 12px;
+			color: var(--accent);
+			font-size: 0.9rem;
+			font-weight: 700;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+		}
+
+		h1,
+		h2,
+		p {
+			margin-top: 0;
+		}
+
+		h1 {
+			margin-bottom: 16px;
+			font-size: clamp(2.6rem, 8vw, 4.5rem);
+			line-height: 1.08;
+		}
+
+		.lead {
+			max-width: 650px;
+			margin-bottom: 28px;
+			color: var(--muted);
+			font-size: clamp(1.1rem, 2vw, 1.3rem);
+		}
+
+		.button {
+			display: inline-block;
+			padding: 10px 18px;
+			border: 1px solid var(--accent);
+			border-radius: 6px;
+			background: var(--accent);
+			color: #fff;
+			font-weight: 700;
+			text-decoration: none;
+			transition: background-color 160ms ease, transform 160ms ease;
+		}
+
+		.button:hover {
+			transform: translateY(-2px);
+			background: #0e554e;
+		}
+
+		.button:focus-visible {
+			outline: 3px solid #8bc9bf;
+			outline-offset: 3px;
+		}
+
+		.section {
+			padding-block: 38px 44px;
+			border-top: 1px solid var(--line);
+		}
+
+		.section h2 {
+			margin-bottom: 12px;
+			font-size: 1.55rem;
+		}
+
+		.section p {
+			max-width: 700px;
+			margin-bottom: 0;
+			color: var(--muted);
+		}
+
+		.interests {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 14px;
+			margin: 22px 0 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.interests li {
+			padding: 14px 16px;
+			border-left: 3px solid var(--accent);
+			background: var(--accent-soft);
+			font-weight: 700;
+		}
+
+		footer {
+			padding-block: 22px 30px;
+			border-top: 1px solid var(--line);
+			color: var(--muted);
+			font-size: 0.9rem;
+		}
+
+		footer p {
+			margin: 0;
+		}
+
+		@media (max-width: 600px) {
+			.page {
+				width: min(100% - 32px, 900px);
+			}
+
+			.topbar {
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.nav {
+				gap: 16px;
+			}
+
+			.interests {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			html {
+				scroll-behavior: auto;
+			}
+
+			*,
+			*::before,
+			*::after {
+				transition-duration: 0.01ms !important;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<header class="topbar">
+			<a class="wordmark" href="#inicio" aria-label="Elvira, inicio">Elvira</a>
+			<nav class="nav" aria-label="Navegación principal">
+				<a href="#sobre-mi">Sobre mí</a>
+				<a href="#intereses">Intereses</a>
+				<a href="#contacto">Contacto</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="intro" id="inicio" aria-labelledby="titulo">
+				<p class="eyebrow">Alumna de Big Data</p>
+				<h1 id="titulo">Hola, soy Elvira.</h1>
+				<p class="lead">Me estoy formando en Big Data y me interesa cómo el análisis de datos puede ayudarnos a comprender mejor la realidad y tomar decisiones con fundamento.</p>
+				<a class="button" href="#sobre-mi">Conóceme</a>
+			</section>
+
+			<section class="section" id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+				<h2 id="sobre-mi-titulo">Sobre mí</h2>
+				<p>Soy estudiante de Big Data, curiosa y motivada por aprender. Disfruto explorando cómo se recopilan, organizan e interpretan los datos, y quiero seguir desarrollando mis conocimientos para transformar información en conclusiones útiles y claras.</p>
+			</section>
+
+			<section class="section" id="intereses" aria-labelledby="intereses-titulo">
+				<h2 id="intereses-titulo">Áreas que me interesan</h2>
+				<p>Estos son algunos de los temas que forman parte de mi camino de aprendizaje:</p>
+				<ul class="interests">
+					<li>Análisis de datos</li>
+					<li>Visualización de información</li>
+					<li>Tecnología y aprendizaje continuo</li>
+				</ul>
+			</section>
+
+			<section class="section" id="contacto" aria-labelledby="contacto-titulo">
+				<h2 id="contacto-titulo">Contacto</h2>
+				<p>Estoy abierta a conectar con personas y proyectos relacionados con los datos y la tecnología.</p>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; 2026 Elvira</p>
+		</footer>
+	</div>
+</body>
+</html>
